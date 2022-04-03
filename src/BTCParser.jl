@@ -16,11 +16,13 @@ export
 """
 The path where the bitcoin client saves the blockchain files.
 """
-const DIR = if haskey(ENV, "BTCPARSER_BLOCK_DIR")
+#=const DIR = if haskey(ENV, "BTCPARSER_BLOCK_DIR")
     ENV["BTCPARSER_BLOCK_DIR"]
 else
     joinpath(ENV["HOME"], ".bitcoin", "blocks")
-end
+end=#
+
+const DIR = "/mnt/sabrent/home/vikas/Desktop/BTC_blockchain_data/blocks"
 
 const HEADER_SIZE = 80
 
